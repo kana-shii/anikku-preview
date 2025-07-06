@@ -34,7 +34,7 @@ jobs:
       - name: Clone Repository (${{ github.event.inputs.git-ref }})
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
-          repository: 'cuong-tran/anikku'
+          repository: 'kana-shii/anikku'
           token: ${{ secrets.BOT_PAT }}
           fetch-depth: 0
           ref: ${{ github.event.inputs.git-ref }}
@@ -102,7 +102,7 @@ jobs:
       - name: Clone Repository (${{ github.event.inputs.git-ref }} - ${{ needs.prepare-build.outputs.TAG_NAME }})
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
-          repository: 'cuong-tran/anikku'
+          repository: 'kana-shii/anikku'
           token: ${{ secrets.BOT_PAT }}
           fetch-depth: 0
           ref: ${{ github.event.inputs.git-ref }}
@@ -198,7 +198,7 @@ jobs:
           tag_name: ${{ needs.prepare-build.outputs.TAG_NAME }}
           name: Anikku ${{ needs.prepare-build.outputs.BUILD_TYPE_NAME }} ${{ needs.prepare-build.outputs.TAG_NAME }}
           body: |
-            [![GitHub downloads](https://img.shields.io/github/downloads/komikku-app/anikku-preview/${{ needs.prepare-build.outputs.TAG_NAME }}/total?label=Downloaded&labelColor=27303D&color=0D1117&logo=github&logoColor=FFFFFF&style=flat)](https://github.com/komikku-app/anikku-preview/releases/${{ needs.prepare-build.outputs.TAG_NAME }})
+            [![GitHub downloads](https://img.shields.io/github/downloads/xkana-shii/anikku-preview/${{ needs.prepare-build.outputs.TAG_NAME }}/total?label=Downloaded&labelColor=27303D&color=0D1117&logo=github&logoColor=FFFFFF&style=flat)](https://github.com/xkana-shii/anikku-preview/releases/${{ needs.prepare-build.outputs.TAG_NAME }})
 
             #### What's Changed
             ##### New
@@ -209,7 +209,7 @@ jobs:
 
             ${{ needs.prepare-build.outputs.COMMIT_LOGS }}
 
-            **Full Changelog**: [komikku-app/anikku@${{ needs.prepare-build.outputs.PREV_TAG_NAME }}...${{ needs.prepare-build.outputs.TAG_NAME }}](https://github.com/komikku-app/anikku/compare/${{ needs.prepare-build.outputs.PREV_TAG_NAME }}...${{ needs.prepare-build.outputs.TAG_NAME }})
+            **Full Changelog**: [xkana-shii/anikku@${{ needs.prepare-build.outputs.PREV_TAG_NAME }}...${{ needs.prepare-build.outputs.TAG_NAME }}](https://github.com/xkana-shii/anikku/compare/${{ needs.prepare-build.outputs.PREV_TAG_NAME }}...${{ needs.prepare-build.outputs.TAG_NAME }})
 
             ---
 
