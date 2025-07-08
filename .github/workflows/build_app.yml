@@ -231,7 +231,7 @@ jobs:
             Anikku-x86-${{ needs.prepare-build.outputs.TAG_NAME }}.apk
             Anikku-x86_64-${{ needs.prepare-build.outputs.TAG_NAME }}.apk
           draft: ${{ github.event.inputs.dry-run != '' || github.event.inputs.git-ref == 'master'}}
-          prerelease: ${{ github.event.inputs.git-ref != 'master'}}
+          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
